@@ -3,7 +3,7 @@
 .section {
   background-color: #7E60BF;
   min-height: 100%;
-  padding: 50px;
+  padding: 10px 50px;
   overflow: hidden;
 }
 
@@ -100,7 +100,6 @@
 }
 
 .btns a:last-child {
-  color: #fff;
   margin-left: 5px;
   transition: 0.3s ease;
 }
@@ -215,3 +214,46 @@
   }
 }
 
+@media screen and (max-width: 450px){
+  .containerMessage {
+
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .showMessage {
+    background-color: white;
+    text-transform: capitalize;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+  }
+}
+
+@media screen and (max-width: 360px){
+  .containerMessage {
+
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .showMessage {
+    background-color: white;
+    text-transform: capitalize;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+  }
+
+  .btns a {
+    padding: 9px 0px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .bookingButton {
+    width: 50%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

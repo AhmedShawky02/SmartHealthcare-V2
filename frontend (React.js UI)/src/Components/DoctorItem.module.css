@@ -385,7 +385,7 @@
         font-size: 15px;
         color: #7E60BF;
     }
-    
+
     .infoItem span {
         font-size: 15px;
         font-weight: bold;
@@ -396,4 +396,36 @@
         font-size: 30px;
     }
 
+}
+
+@media screen and (max-width: 450px) {
+    .containerMessage {
+
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .showMessage {
+        background-color: white;
+        text-transform: capitalize;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 6px rgb(255, 255, 255);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .containerMessage {
+
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .showMessage {
+        background-color: white;
+        text-transform: capitalize;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 6px rgb(255, 255, 255);
+    }
 }
