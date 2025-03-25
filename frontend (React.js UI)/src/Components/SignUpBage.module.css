@@ -47,9 +47,9 @@
 
 .genderLabel {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     color: #333;
-    font-weight:400;
+    font-weight:900;
     align-items: center;
 }
 
@@ -146,6 +146,22 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+@media screen and (max-width:4000px) {
+    .genderLabel{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row; 
+        padding-top: 0px;
+
+    }
+    .contanerRadio{
+        display: flex;
+        gap: 0px;
+    }
+}
+
+
 @media screen and (max-width:700px) {
     .content {
         flex-direction: column-reverse;
@@ -206,6 +222,20 @@
 
     .successData {
         width: 50%;
+    }
+
+    .genderLabel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        padding-top: 15px;
+
+    }
+    .contanerRadio{
+
+        display: flex;
+        gap: 40px;
     }
 }
 

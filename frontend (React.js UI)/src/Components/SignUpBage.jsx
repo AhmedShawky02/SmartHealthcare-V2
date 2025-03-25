@@ -30,7 +30,7 @@ export default function SignUpBage() {
                 <div className={classes.content}>
                     <div className={classes.form}>
                         <h2>Sign Up</h2>
-                        <Form method="post"> 
+                        <Form method="post">
                             <label className={`${classes.Datainput} ${classes.label}`}>
                                 Name: <br />
                                 <input className={classes.input} type="text" name="name" required />
@@ -51,14 +51,18 @@ export default function SignUpBage() {
                                 <input className={classes.input} type="number" name="age" min="0" required />
                             </label>
 
-                            <label className={classes.genderLabel}>
+                            <label className={classes.genderLabel }>
                                 Gender:
-                                <label className={classes.genderLabel}>
-                                    <input className={classes.input} type="radio" name="gender" value="0" required /> Male
-                                </label>
-                                <label className={classes.genderLabel}>
-                                    <input className={classes.input} type="radio" name="gender" value="1" required /> Female
-                                </label>
+
+                                <div className={classes.contanerRadio}>
+
+                                    <label>
+                                        <input className={classes.input} type="radio" name="gender" value="0" required /> Male
+                                    </label>
+                                    <label >
+                                        <input className={classes.input} type="radio" name="gender" value="1" required /> Female
+                                    </label>
+                                </div>
                             </label>
 
                             <button className={classes.button} disabled={isSubmitting || isRedirecting}>
