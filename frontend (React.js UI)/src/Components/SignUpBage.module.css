@@ -47,9 +47,9 @@
 
 .genderLabel {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     color: #333;
-    font-weight: 800;
+    font-weight:400;
     align-items: center;
 }
 
@@ -218,7 +218,7 @@
 
     .genderLabel {
         display: flex;
-        gap: 10px;
+        gap: 5px;
         color: #333;
         font-weight: 800;
         font-size: 0.8rem;
