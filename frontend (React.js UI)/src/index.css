@@ -12,6 +12,6 @@ html,body {
     overflow-x: hidden;
     padding: 0;
     box-sizing: border-box;
-    background-color: #7E60BF;
+    background-color: red;
     font-family: "Open Sans", sans-serif;
 }
