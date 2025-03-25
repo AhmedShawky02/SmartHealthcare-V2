@@ -1,0 +1,178 @@
+.section {
+    background-color: #FFE1FF;
+    min-height: 600px;
+    padding: 0 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.diseasesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.diseaseCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.title {
+    font-size: 3rem;
+    padding: 50px 0 20px;
+}
+
+.diseaseCard:hover {
+    transform: scale(1.05);
+}
+
+.diseaseImage {
+    margin-left: 10px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+.diseaseInfo {
+    padding: 15px;
+    flex: 1;
+}
+
+.diseaseName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.symptomList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.symptomItem {
+    font-size: 1rem;
+    color: #555;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.symptomItem:last-child {
+    border-bottom: none;
+}
+
+
+.loader {
+    border: 5px solid rgba(41, 41, 41, 0.3);
+    border-top: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    margin: 80px auto;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .section {
+        padding: 0 80px;
+    }
+
+
+    .title {
+        font-size: 2.8rem;
+        padding: 50px 0 20px;
+    }
+}
+
+@media screen and (max-width: 566px) {
+    .section {
+        padding: 0 40px;
+    }
+
+}
+
+@media screen and (max-width: 486px) {
+    .section {
+        padding: 0 40px;
+    }
+
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .diseasesContainer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        padding: 20px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .diseasesContainer {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px 0 50px 0;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        padding: 20px 0 0 0;
+    }
+
+    .diseaseCard {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .diseaseImage {
+        width: 200px;
+        margin: auto;
+        height: 80px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .diseaseName {
+        font-size: 1.2rem;
+    }
+
+    .symptomItem {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 250px){
+    .section {
+        padding: 0 20px;
+    }
+}

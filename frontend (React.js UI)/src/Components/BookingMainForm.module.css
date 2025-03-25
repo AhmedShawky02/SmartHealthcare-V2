@@ -1,0 +1,223 @@
+.section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+.select, .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+}
+
+.select:focus, .input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+.errorModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333333a2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.errorContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    width: 350px;
+}
+
+.errorContent p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.errorContent button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.errorContent button:hover {
+    background: #c82333;
+}
+
+
+@media screen and (max-width: 486px) {
+    .section {
+        max-width: 350px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    .section {
+        max-width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 1.2rem;
+    }
+    
+    .select, .input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        
+    }
+
+    .label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #555;
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .section {
+        max-width: 250px;
+        margin: 50px auto;
+        padding: 15px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 1rem;
+    }
+    
+    .select, .input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        
+    }
+
+    .label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #555;
+        font-size: 0.8rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 250px) {
+
+    .section {
+        max-width: 200px;
+        margin: 50px auto;
+        padding: 12px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 0.9rem;
+    }
+    
+    .select, .input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        
+    }
+
+    .label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #555;
+        font-size: 0.7rem;
+        text-align: left;
+    }
+}

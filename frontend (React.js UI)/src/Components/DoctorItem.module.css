@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.section {
+    background-color: #7E60BF;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 100%;
+}
+
+.container .box {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    border-radius: 10px;
+    width: 90%;
+
+}
+
+.box .quote i {
+    margin-top: 10px;
+    font-size: 45px;
+
+    color: #17c0eb
+}
+
+.container .box .image {
+    margin: 10px 0;
+    height: 200px;
+    width: 200px;
+    background: #8e44ad;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.box .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+.box p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.box .name_job {
+    margin: auto;
+    padding: 10px 0;
+    color: #8e44ad;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.rating i {
+    font-size: 18px;
+    color: #fcb424;
+    margin-bottom: 5px;
+}
+
+.btns {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+.infoData {
+    width: 30%;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.infoItemExperienced {
+    font-size: 35px;
+    text-align: center;
+    margin: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.infoItem strong {
+    color: #7E60BF;
+}
+
+.infoItem span {
+    font-weight: bold;
+    color: #333;
+}
+
+.moreInfo {
+    width: 60%;
+}
+
+.containerMessage {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333cb;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.showMessage {
+    background-color: white;
+    text-transform: capitalize;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+}
+
+
+.progressBar {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #b83333;
+    animation: progressAnimation 2s ease-in-out forwards;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+.bookingButton {
+    width: 50%;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: #8e44ad;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.bookingButton:hover {
+    background: #7915a3;
+    box-shadow: 0 0 5px black;
+}
+
+@media (max-width:1200px) {
+    .box .name_job {
+        margin: auto;
+        padding: 10px 0;
+        color: #8e44ad;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width:900px) {
+    .infoItemExperienced {
+        font-size: 28px;
+        text-align: center;
+        margin: 20px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+    }
+
+    .box .name_job {
+        margin: auto;
+        padding: 10px 0;
+        color: #8e44ad;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+
+    .infoItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        gap: 10px;
+        margin: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .infoItem span {
+        text-align: center;
+        font-weight: bold;
+        width: 50%;
+        color: #333;
+    }
+
+
+}
+
+@media (max-width:800px) {
+    .container .box {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .infoData {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moreInfo {
+        width: 90%;
+    }
+
+}
+
+@media (max-width:550px) {
+
+    .container .box .image {
+        margin: 10px 0;
+        height: 150px;
+        width: 150px;
+        background: #8e44ad;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    .infoItemExperienced {
+        font-size: 20px;
+        text-align: center;
+        margin: 20px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+    }
+
+    .infoItem {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+@media (max-width:450px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .container .box {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        padding: 15px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .box .image {
+        margin: 10px 0;
+        height: 150px;
+        width: 150px;
+        background: #8e44ad;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    .infoItemExperienced {
+        font-size: 18px;
+        text-align: center;
+        margin: 20px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+    }
+
+    .infoItem {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+@media (max-width: 360px) {
+
+
+    .container .box {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        padding: 15px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .box .image {
+        margin: 10px 0;
+        height: 140px;
+        width: 140px;
+        background: #8e44ad;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    .infoItemExperienced {
+        font-size: 17px;
+        text-align: center;
+        margin: 10px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+    }
+
+    .infoItem {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .infoItem strong {
+        font-size: 15px;
+        color: #7E60BF;
+    }
+    
+    .infoItem span {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .box .name_job {
+        font-size: 30px;
+    }
+
+}

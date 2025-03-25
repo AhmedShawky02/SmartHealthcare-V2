@@ -1,0 +1,128 @@
+CREATE TABLE Users 
+(
+    user_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL,
+    email NVARCHAR(100) UNIQUE NOT NULL,
+    password NVARCHAR(255) NOT NULL,
+    age INT,
+    gender INT,
+    ForgetToken NVARCHAR(10) NULL
+);
+
+
+CREATE TABLE MedicalCenters 
+(
+    center_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL,
+    location NVARCHAR(255)
+);
+
+CREATE TABLE Departments 
+(
+    department_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL,
+    picture NVARCHAR(255)
+);
+
+
+
+CREATE TABLE Doctors 
+(
+    doctor_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL,
+    info NVARCHAR(255),
+    profile_picture NVARCHAR(255),
+    available_time NVARCHAR(100),
+    center_id INT,
+    department_id INT,
+    FOREIGN KEY (center_id) REFERENCES MedicalCenters(center_id) ,
+    FOREIGN KEY (department_id) REFERENCES Departments(department_id) 
+);
+
+CREATE TABLE BookingDoctor 
+(
+    BookingDoctor_id INT PRIMARY KEY IDENTITY (1,1),
+    Date Datetime NOT NULL,
+    user_id INT,
+    doctor_id INT,
+    FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+);
+
+
+
+
+CREATE TABLE Nurses 
+(
+    nurse_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL,
+    info NVARCHAR(255),
+    profile_picture NVARCHAR(255),
+    age INT,
+    center_id INT,
+    FOREIGN KEY (center_id) REFERENCES MedicalCenters(center_id) 
+);
+
+CREATE TABLE BookingNurse 
+(
+    BookingNurse_id INT PRIMARY KEY IDENTITY (1,1),
+    Date Datetime NOT NULL,
+    user_id INT,
+    nurse_id INT,
+    FOREIGN KEY (nurse_id) REFERENCES Nurses(nurse_id) ,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+);
+
+CREATE TABLE Diseases 
+(
+    disease_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+CREATE TABLE Symptoms 
+(
+    symptom_id INT PRIMARY KEY IDENTITY (1,1),
+    name NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE DiseaseSymptoms 
+(
+    DiseaseSymptoms_id INT PRIMARY KEY IDENTITY (1,1),
+    disease_id INT,
+    symptom_id INT,
+    FOREIGN KEY (disease_id) REFERENCES Diseases(disease_id),
+    FOREIGN KEY (symptom_id) REFERENCES Symptoms(symptom_id) 
+);
+
+CREATE TABLE Reviews 
+(
+    review_id INT PRIMARY KEY IDENTITY (1,1),
+    rating FLOAT,
+    comment VARCHAR(255),
+    user_id INT,
+    doctor_id INT,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
+);
+
+CREATE TABLE AwarenessVideos 
+(
+    video_id INT PRIMARY KEY IDENTITY (1,1),
+    title VARCHAR(255),
+    category VARCHAR(100),
+    duration VARCHAR(50),
+    upload_date DATETIME,
+    view_count INT
+);
+
+CREATE TABLE UsersVideos 
+(
+    UsersVideos_id INT PRIMARY KEY IDENTITY (1,1),
+    user_id INT,
+    video_id INT,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ,
+    FOREIGN KEY (video_id) REFERENCES AwarenessVideos(video_id) 
+);
+

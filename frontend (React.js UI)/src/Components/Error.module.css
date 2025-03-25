@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+    padding: 120px 50px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #7E60BF;
+    color: white;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subTitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}

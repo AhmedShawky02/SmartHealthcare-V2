@@ -1,0 +1,244 @@
+.section {
+    background-color: #E4B1F0;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+.container .containerTitle {
+    text-align: center;
+
+}
+
+.container .containerTitle .title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.container .containerTitle .title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    transform: translateX(50%);
+    height: 4px;
+    background-color: #433878;
+    border-radius: 5px;
+}
+
+.container .containerTitle .subtitle {
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.highlight {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.container .noReviews {
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
+}
+
+
+.containerDataShow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+    gap: 30px;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+}
+
+.containerData {
+    display: flex;
+    align-self: start;
+    gap: 10px;
+    padding: 20px;
+    background-color: #43387891;
+    color: white;
+    width: 100%;
+    margin: auto;
+    border-radius: 40px;
+    transition: 0.3s ease;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+.containerData:hover {
+    transform: translateY(-8px);
+}
+
+.imagecontaner img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: -50%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.Datacontaner {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.Datacontaner h3 {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.Datacontaner p {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.Datacontaner .rating i {
+    font-size: 18px;
+    color: #fcb424;
+    padding: 10px 0;
+}
+
+@media (max-width:800px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 40px 80px;
+    }
+
+}
+
+@media (max-width:650px) {
+
+
+    .imagecontaner img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-left: 0%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .containerData {
+
+        gap: 20px;
+        padding: 20px;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 40px;
+    }
+
+
+}
+
+@media (max-width:450px) {
+    .Datacontaner {
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .containerData {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0px;
+
+    }
+}
+
+@media (max-width: 360px) {
+    .Datacontaner h3 {
+        font-size: 22px;
+        padding: 10px 0;
+    }
+    
+    .Datacontaner p {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .Datacontaner .rating i {
+        font-size: 18px;
+        color: #fcb424;
+        padding: 0;
+    }
+}
+
+@media (max-width: 250px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 40px 20px;
+    }
+    
+    .Datacontaner h3 {
+        font-size: 22px;
+        padding: 10px 0;
+    }
+    
+    .Datacontaner p {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .Datacontaner .rating i {
+        font-size: 18px;
+        color: #fcb424;
+        padding: 0;
+    }
+
+    .containerDataShow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: start;
+        gap: 30px;
+        padding: 5px;
+        margin: auto;
+        width: 100%;
+    }
+    
+}

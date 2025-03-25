@@ -1,0 +1,319 @@
+.navbar {
+    display: flex;
+    padding: 20px 100px;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    background: #433878;
+
+}
+
+.navbar .logo {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+}
+
+
+.navbar .links a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.1s ease;
+    font-weight: bold;
+
+}
+
+.navbar .links a:hover {
+    color: #FFE1FF;
+}
+
+.navbar .links .active {
+    color: #08e2ff;
+}
+
+.navbar .login {
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .login:hover {
+    background: #ffffff;
+    color: #433878;
+}
+
+.navbar .signup {
+    border: 2px solid #ffcc00;
+    background: transparent;
+    color: #ffcc00;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .signup:hover {
+    background: #ffcc00;
+    color: #433878;
+}
+
+.menuButton {
+    display: none;
+}
+
+/* تصميم الزر */
+.menuButtonClick {
+    background: none;
+    position: relative;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menuButtonClick::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-left: 2px solid rgb(255, 255, 255);
+    width: 2px;
+    height: 80%;
+    transform: translateY(-50%);
+}
+
+/* تصميم القائمة المنسدلة */
+.dropdown {
+    position: relative;
+}
+
+.dropdownContent {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* مخفية افتراضيًا */
+    flex-direction: column;
+    min-width: 250px;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+/* لما القائمة مفتوحة */
+.dropdown.open .dropdownContent {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* تصميم الروابط داخل القائمة */
+.dropdownContent a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+    z-index: 554441;
+}
+
+.dropdownContent a:hover {
+    background-color: #f1f1f1;
+}
+
+/* تصميم زر الـ Logout */
+.logoutButton {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: red;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.logoutButton:hover {
+    background-color: #ffe6e6;
+}
+
+.dropdownLink {
+    color: #433878 !important;
+    font-weight: bold;
+}
+
+.dropdownLink:hover {
+    color: #282149 !important;
+}
+
+
+@media (max-width: 1305px) {
+
+
+    /* زر القائمة */
+    .menuButton {
+        display: block;
+        color: white;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    /* خلفية شفافة عند فتح القائمة */
+    .menuOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        z-index: 998;
+        display: none;
+    }
+
+    /* إظهار الخلفية عند فتح القائمة */
+    .showOverlay {
+        display: block;
+    }
+
+    /* إخفاء القائمة افتراضيًا */
+    .navbar .links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #433878;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    /* عند الفتح */
+    .showMenu {
+        left: 0;
+    }
+
+    .menuButtonClick::before {
+        display: none;
+    }
+
+
+    .menuButtonClick::after {
+        content: "";
+        margin-bottom: -5px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-top: 2px solid rgb(255, 255, 255);
+        width: 100%;
+        height: 80%;
+        transform: translateY(-50%);
+    }
+
+
+    .dropdownContent {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+        /* مخفية افتراضيًا */
+        flex-direction: column;
+        min-width: 250px;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    .navbar .logo h2 {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 710px){
+    .navbar{
+        padding: 20px 50px;
+    }
+    .navbar .logo h2 {
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px){
+    .navbar{
+        padding: 20px 40px;
+    }
+
+    .navbar .logo h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+
+@media (max-width: 300px){
+    .navbar{
+        padding: 20px 20px;
+    }
+
+    .navbar .logo h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .navbar .logo img {
+        width: 50px;
+        border-radius: 50%;
+    }
+}

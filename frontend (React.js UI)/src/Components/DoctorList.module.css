@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.section {
+  background-color: #7E60BF;
+  min-height: 100%;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+.container .box {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 5px;
+
+}
+
+.box .quote i {
+  margin-top: 10px;
+  font-size: 45px;
+  color: #17c0eb
+}
+
+.container .box .image {
+  margin: 10px 0;
+  height: 150px;
+  width: 150px;
+  background: #8e44ad;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.box p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.box .name_job {
+  margin: 10px 0 3px 0;
+  color: #8e44ad;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.rating i {
+  font-size: 18px;
+  color: #8e44ad;
+  margin-bottom: 5px;
+}
+
+.btns {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.btns a {
+  background: #8e44ad;
+  width: 100%;
+  padding: 9px 0px;
+  outline: none;
+  border: 2px solid #8e44ad;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #8e44ad;
+  transition: all 0.3s linear;
+}
+
+.btns a:first-child {
+  background: none;
+  margin-right: 5px;
+}
+
+.btns a:last-child {
+  color: #fff;
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+
+.btns a:first-child:hover {
+  background: #8e44ad;
+  color: #fff;
+}
+
+.btns a:last-child:hover {
+  transform: scale(1.03);
+}
+
+.btns a:hover {
+  color: #fff;
+}
+
+.noDoctors {
+  background-color: #fce4e4;
+  border: 3px solid #fcc2c3;
+  padding: 20px 30px;
+  color: red;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 80px auto;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bookingButton {
+  width: 50%;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: #8e44ad;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.bookingButton:hover {
+  background: #7915a3;
+}
+
+.containerMessage {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333cb;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.showMessage {
+  background-color: white;
+  text-transform: capitalize;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgb(255, 255, 255);
+}
+
+
+.progressBar {
+  width: 100%;
+  height: 5px;
+  background: #ccc;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: #b83333;
+  animation: progressAnimation 2s ease-in-out forwards;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
