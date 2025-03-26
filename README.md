@@ -148,8 +148,7 @@ A comprehensive **full-stack** web application designed for managing healthcare-
 - Provides clear **error messages** for debugging and user guidance.
 
 ## **🌍 Live Demo & Deployment**
-- **Frontend (React):** [Deployed Link]
-- **Backend API:** [Deployed API Link]
+https://smart-healthcare-v2.vercel.app
 
 ## **🎯 Outcome**
 A fully functional **full-stack** system that provides **secure authentication, comprehensive healthcare management, booking capabilities, and an interactive user interface**. With **React.js frontend and ASP.NET Core backend**, this project delivers a scalable and efficient solution for healthcare operations.
